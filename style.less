@@ -1,3 +1,7 @@
+@lc: #FFFFFF;
+@gc: #97975c;
+@dc: #000000;
+
 body{
     font-size: 16px;
 
@@ -58,7 +62,7 @@ body{
 
                         li{
                             &:hover{
-                                
+
                                 .sub-menu{
                                 visibility: visible;
                                 }
@@ -78,13 +82,13 @@ body{
         }  
     
         li a{
-            color: #FFFFFF;
+            color: @lc;
     
             &:hover{
                 background-color: transparent;
                 text-decoration: underline;
                 text-underline-offset: 6px;
-                text-decoration-color: rgb(151, 151, 92);
+                text-decoration-color: @gc;
                 text-decoration-thickness: 3px;
                 transition: .3s;
             }
@@ -95,7 +99,7 @@ body{
         &::after{
             content: '';
             position: absolute;
-            background-color: rgb(151, 151, 92);
+            background-color: @gc;
             width: 300px;
             height: 5px;
             display: block;
@@ -103,7 +107,7 @@ body{
         }
 
         .header_text_wrapper{
-            color: #FFFFFF;
+            color: @lc;
         
             .header_text{
                 text-transform: uppercase;
@@ -123,17 +127,17 @@ body{
         margin-top: 70px;
         
         .small_text{
-            color: #FFFFFF;
+            color: @lc;
             font-size: 1.250em;
     
         }
     }
 
     .search_wrapper{
-        border: 5px solid rgb(151, 151, 92);
+        border: 5px solid @gc;
     
         .form_inner_wrapper{
-            background-color: #FFFFFF;
+            background-color: @lc;
             padding: 15px;
             box-sizing: border-box;
     
@@ -165,7 +169,7 @@ body{
                 button{
                     padding: 30px;
                     margin-left: 18px;
-                    background-color: rgb(151, 151, 92);
+                    background-color: @gc;
                     border: none;
                 }
             }
