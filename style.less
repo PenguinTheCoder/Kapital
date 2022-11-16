@@ -1,0 +1,174 @@
+body{
+    font-size: 16px;
+
+    .main{
+        position: relative;
+    }
+}
+
+.page_background_first{
+    background-image: url(business-people-dark-blue-overlay-white-math-graphics-digital-composite-89406963.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 40%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1
+}
+
+.page_background_second{
+    background-image: url(1_The-main-picture-of-Villa-Noce-790x500.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 60%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.container{
+    width: 1400px;
+
+    >.row{
+    margin-top: 40px;
+    }
+
+    .navbar{
+        float: right;
+        font-size: 0.875em;
+        text-transform: uppercase;
+        position: absolute;
+        right: 0;
+
+        .navbar-nav{
+            >li{
+                &:hover{
+                    .dropdown-menu{
+                        display: block;
+
+                        li a{
+                            color: #000;
+                        }
+
+                        li{
+                            &:hover{
+                                .sub-menu{
+                                visibility: visible;
+                                }
+                            }
+                        }
+
+                        .sub-menu{
+                            left: 100%;
+                            position: absolute;
+                            top: 0;
+                            visibility: hidden;
+                            margin-top: -1px;
+                        }
+                    }
+                }
+            }
+        }  
+    
+        li a{
+            color: #FFFFFF;
+    
+            &:hover{
+                background-color: transparent;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                text-decoration-color: rgb(151, 151, 92);
+                text-decoration-thickness: 3px;
+                transition: .3s;
+            }
+        }
+    }
+
+    .gold_dec{
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: rgb(151, 151, 92);
+            width: 300px;
+            height: 5px;
+            display: block;
+            left: -140px;
+        }
+
+        .header_text_wrapper{
+            color: #FFFFFF;
+        
+            .header_text{
+                text-transform: uppercase;
+                font-size: 3.500em;
+            }
+        
+            .header_text_fine{
+                font-size: 10.625em;
+                font-family: Brush Script MT, Brush Script Std, cursive;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+
+    .map_wrapper{
+        margin-top: 70px;
+        
+        .small_text{
+            color: #FFFFFF;
+            font-size: 1.250em;
+    
+        }
+    }
+
+    .search_wrapper{
+        border: 5px solid rgb(151, 151, 92);
+    
+        .form_inner_wrapper{
+            background-color: #FFFFFF;
+            padding: 15px;
+            box-sizing: border-box;
+    
+            .form-group{
+                border-right: 1px solid grey;
+                padding-left: 5px;
+    
+                label{
+                    display: block;
+                    font-size: 1.125em;
+                    min-width: 250px;
+                }
+    
+                input, select{
+                    border: none;
+                    font-size: 1.250em;
+                }
+            
+                &:last-child{
+                    border-right: none;
+                    padding-left: 0;
+                }
+            
+                &:nth-child(5){
+                    border-right: none;
+                    width: 150px;
+                }
+            
+                button{
+                    padding: 30px;
+                    margin-left: 18px;
+                    background-color: rgb(151, 151, 92);
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
