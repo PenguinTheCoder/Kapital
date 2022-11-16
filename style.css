@@ -39,16 +39,10 @@ body .main {
   font-size: 0.875em;
   text-transform: uppercase;
   position: absolute;
-  right: 0;
+  right: 60px;
 }
 .container .navbar .navbar-nav > li:hover .dropdown-menu {
   display: block;
-}
-.container .navbar .navbar-nav > li:hover .dropdown-menu li a {
-  color: #000;
-}
-.container .navbar .navbar-nav > li:hover .dropdown-menu li:hover .sub-menu {
-  visibility: visible;
 }
 .container .navbar .navbar-nav > li:hover .dropdown-menu .sub-menu {
   left: 100%;
@@ -56,6 +50,12 @@ body .main {
   top: 0;
   visibility: hidden;
   margin-top: -1px;
+}
+.container .navbar .navbar-nav > li:hover .dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+.container .navbar .navbar-nav > li:hover .dropdown-menu li a {
+  color: #000000;
 }
 .container .navbar li a {
   color: #FFFFFF;
@@ -68,6 +68,26 @@ body .main {
   text-decoration-thickness: 3px;
   transition: 0.3s;
 }
+.container .flags_wrapper {
+  position: absolute;
+  right: -120px;
+  top: 15px;
+}
+.container .gold_dec {
+  color: #FFFFFF;
+  text-align: left;
+}
+.container .gold_dec > p {
+  text-transform: uppercase;
+  font-size: 3.5em;
+}
+.container .gold_dec > p:nth-of-type(2) {
+  text-transform: none;
+  font-size: 10.625em;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  position: absolute;
+  top: 0;
+}
 .container .gold_dec::after {
   content: '';
   position: absolute;
@@ -77,25 +97,13 @@ body .main {
   display: block;
   left: -140px;
 }
-.container .gold_dec .header_text_wrapper {
-  color: #FFFFFF;
-}
-.container .gold_dec .header_text_wrapper .header_text {
-  text-transform: uppercase;
-  font-size: 3.5em;
-}
-.container .gold_dec .header_text_wrapper .header_text_fine {
-  font-size: 10.625em;
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  position: absolute;
-  top: 0;
-}
 .container .map_wrapper {
   margin-top: 70px;
 }
-.container .map_wrapper .small_text {
+.container .map_wrapper p {
   color: #FFFFFF;
   font-size: 1.25em;
+  text-align: left;
 }
 .container .search_wrapper {
   border: 5px solid #97975c;
@@ -114,22 +122,29 @@ body .main {
   font-size: 1.125em;
   min-width: 250px;
 }
+.container .search_wrapper .form_inner_wrapper .form-group i {
+  color: #97975c;
+}
 .container .search_wrapper .form_inner_wrapper .form-group input,
 .container .search_wrapper .form_inner_wrapper .form-group select {
   border: none;
   font-size: 1.25em;
 }
-.container .search_wrapper .form_inner_wrapper .form-group:last-child {
-  border-right: none;
-  padding-left: 0;
-}
 .container .search_wrapper .form_inner_wrapper .form-group:nth-child(5) {
   border-right: none;
   width: 150px;
 }
+.container .search_wrapper .form_inner_wrapper .form-group:last-child {
+  border-right: none;
+  padding-left: 0;
+}
 .container .search_wrapper .form_inner_wrapper .form-group button {
-  padding: 30px;
-  margin-left: 18px;
+  margin-left: 10px;
   background-color: #97975c;
   border: none;
+}
+.container .search_wrapper .form_inner_wrapper .form-group button i {
+  font-size: 40px;
+  padding: 10px;
+  color: #FFFFFF;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d4227177f5.js" crossorigin="anonymous"></script>
     <title>3. zadatak</title>
 </head>
 <body>
@@ -16,9 +17,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2">
-                            <div class="logo_img">
-                                <img src="Circle_K-logo-E4E700ADB0-seeklogo.com.png" alt="logo" width="300px" height="100px">
-                            </div>
+                            <img src="Circle_K-logo-E4E700ADB0-seeklogo.com.png" alt="logo" width="300px" height="100px">
                         </div>
                         <div class="col-md-10">
                             <nav class="navbar">
@@ -43,10 +42,15 @@
                                     <li><a href="#">Moji favoriti</a></li>
                                     <li><a href="#">Blog</a></li>
                                     <li><a href="#">O nama</a></li>
-                                    <li><a href="#">Kontakt</a></li>
-                                    <li><a href="#">Zastave</a></li>       
+                                    <li><a href="#">Kontakt</a></li>     
                                 </ul> 
                             </nav>
+                            <div class="flags_wrapper">
+                                <a href="#"><img src="#" alt="cro" height="20px" width="20px"></a>
+                                <a href="#"><img src="#" alt="ger" height="20px" width="20px"></a>
+                                <a href="#"><img src="#" alt="eng" height="20px" width="20px"></a>
+                                <a href="#"><img src="#" alt="ita" height="20px" width="20px"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,28 +59,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 gold_dec">
-                        <div class="header_text_wrapper">
-                            <div class="header_text">
-                                velika ponuda
-                            </div>
-                            <div class="header_text_fine">
-                                lux nekretnina
-                            </div>
-                        </div>
+                        <p>velika ponuda</p>
+                        <p>lux nekretnina</p>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="map_wrapper">
-                            <div class="small_text">
-                                Za najbolje rezultate možete koristiti i pretragu putem karte
-                            </div>
-                            <div class="map">
-                                <img src="260-2608498_jamaica-clipart-island-jamaica-map-png.png" alt="map" width="300px" height="300px">
-                            </div>
-                        </div>    
+                    <div class="col-md-3 map_wrapper">
+                        <p>Za najbolje rezultate možete koristiti i pretragu putem karte</p>
+                        <img src="260-2608498_jamaica-clipart-island-jamaica-map-png.png" alt="map" width="300px" height="300px">    
                     </div>
                 </div>
             </div>
@@ -84,11 +76,11 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="search_wrapper">
-                            <form class="form-inline" action="/action_page.php">
+                            <form class="form-inline" action="">
                                 <div class="form_inner_wrapper">
                                     <div class="form-group">
                                         <label for="vrsta">Vrsta Nekretnine</label>
-                                        <div class="glyphicon glyphicon-home"></div>
+                                        <i class="fa-solid fa-house"></i>
                                         <select name="type" id="vrsta">
                                             <option value="228">Stan</option>
                                             <option value="234">Hotel</option>
@@ -102,17 +94,17 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="lokacija">Lokacija</label>
-                                        <div  class="glyphicon glyphicon-screenshot"></div>
+                                        <i class="fa-solid fa-location-crosshairs"></i>
                                         <input type="search" id="lokacija" placeholder="Rijeka" name="location">
                                     </div>
                                     <div class="form-group">
                                         <label for="cijena">Cijena</label>
-                                        <div class="glyphicon glyphicon-tags"></div>
+                                        <i class="fa-solid fa-tags"></i>
                                         <input type="number" id="cijena" placeholder="DO €100.000" name="price">
                                     </div>
                                     <div class="form-group">
-                                        <label for="porvsina">Površina</label>
-                                        <div class="glyphicon glyphicon-fullscreen"></div>
+                                        <label for="povrsina">Površina</label>
+                                        <i class="fa-solid fa-expand"></i>
                                         <input type="number" id="povrsina" placeholder="DO 55m" name="space">
                                     </div>
                                     <div class="form-group">
@@ -121,7 +113,7 @@
                                     </div>
                                     <div class="form-group">
                                         <button type="submit">
-                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
                                         </button>
                                     </div>
                                 </div>

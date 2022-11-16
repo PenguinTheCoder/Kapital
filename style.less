@@ -48,26 +48,13 @@ body{
         font-size: 0.875em;
         text-transform: uppercase;
         position: absolute;
-        right: 0;
+        right: 60px;
 
         .navbar-nav{
             >li{
                 &:hover{
                     .dropdown-menu{
                         display: block;
-
-                        li a{
-                            color: #000;
-                        }
-
-                        li{
-                            &:hover{
-
-                                .sub-menu{
-                                visibility: visible;
-                                }
-                            }
-                        }
 
                         .sub-menu{
                             left: 100%;
@@ -76,26 +63,62 @@ body{
                             visibility: hidden;
                             margin-top: -1px;
                         }
+
+                        li{
+                            &:hover{
+                                .sub-menu{
+                                    visibility: visible;
+                                }
+                            }
+
+                            a{
+                                color: @dc;
+                            }
+                        }
                     }
                 }
             }
         }  
     
-        li a{
-            color: @lc;
-    
-            &:hover{
-                background-color: transparent;
-                text-decoration: underline;
-                text-underline-offset: 6px;
-                text-decoration-color: @gc;
-                text-decoration-thickness: 3px;
-                transition: .3s;
+        li{
+            a{
+                color: @lc;
+        
+                &:hover{
+                    background-color: transparent;
+                    text-decoration: underline;
+                    text-underline-offset: 6px;
+                    text-decoration-color: @gc;
+                    text-decoration-thickness: 3px;
+                    transition: .3s;
+                }
             }
         }
     }
 
+    .flags_wrapper{
+        position: absolute;
+        right: -120px;
+        top: 15px;
+    }
+
     .gold_dec{
+        color: @lc;
+        text-align: left;
+
+        >p{
+            text-transform: uppercase;
+            font-size: 3.500em;
+
+            &:nth-of-type(2){
+                text-transform: none;
+                font-size: 10.625em;
+                font-family: Brush Script MT, Brush Script Std, cursive;
+                position: absolute;
+                top: 0;
+            }
+        }
+
         &::after{
             content: '';
             position: absolute;
@@ -105,31 +128,15 @@ body{
             display: block;
             left: -140px;
         }
-
-        .header_text_wrapper{
-            color: @lc;
-        
-            .header_text{
-                text-transform: uppercase;
-                font-size: 3.500em;
-            }
-        
-            .header_text_fine{
-                font-size: 10.625em;
-                font-family: Brush Script MT, Brush Script Std, cursive;
-                position: absolute;
-                top: 0;
-            }
-        }
     }
 
     .map_wrapper{
         margin-top: 70px;
         
-        .small_text{
+        p{
             color: @lc;
             font-size: 1.250em;
-    
+            text-align: left;
         }
     }
 
@@ -150,27 +157,36 @@ body{
                     font-size: 1.125em;
                     min-width: 250px;
                 }
+
+                i{
+                    color: @gc;
+                }
     
                 input, select{
                     border: none;
                     font-size: 1.250em;
                 }
-            
+                
+                &:nth-child(5){
+                    border-right: none;
+                    width: 150px;
+                }
+
                 &:last-child{
                     border-right: none;
                     padding-left: 0;
                 }
             
-                &:nth-child(5){
-                    border-right: none;
-                    width: 150px;
-                }
-            
                 button{
-                    padding: 30px;
-                    margin-left: 18px;
+                    margin-left: 10px;
                     background-color: @gc;
                     border: none;
+
+                    i{
+                        font-size: 40px;
+                        padding: 10px;
+                        color: @lc;
+                    }
                 }
             }
         }
