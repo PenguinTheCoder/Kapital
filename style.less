@@ -1,3 +1,7 @@
+@import "./less/fontawesome.less";
+
+@import "./less/solid.less";
+
 @lc: #FFFFFF;
 @gc: #97975c;
 @dc: #000000;
@@ -176,6 +180,10 @@ body{
             &:nth-child(5){
                 border-right: none;
                 width: 150px;
+
+                &::after{
+                    content: @fa-var-magnifying-glass;
+                }
             }
 
             &:last-child{
