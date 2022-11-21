@@ -40,7 +40,11 @@ body{
     width: 1400px;
 
     >.row{
-    margin-top: 40px;
+        margin-top: 40px;
+    }
+
+    img{
+        margin-bottom: 60px;
     }
 
     .navbar{
@@ -115,19 +119,23 @@ body{
                 font-size: 10.625em;
                 font-family: Brush Script MT, Brush Script Std, cursive;
                 position: absolute;
-                top: 0;
+                top: 190px;
+                left: 250px;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color: @gc;
+                    width: 300px;
+                    height: 5px;
+                    display: block;
+                    left: -125px;
+                    top: 80px;
+                }
             }
         }
 
-        &::after{
-            content: '';
-            position: absolute;
-            background-color: @gc;
-            width: 300px;
-            height: 5px;
-            display: block;
-            left: -140px;
-        }
+
     }
 
     .map_wrapper{
@@ -140,53 +148,50 @@ body{
         }
     }
 
-    .search_wrapper{
+    .form_inner_wrapper{
+        background-color: @lc;
+        padding: 15px;
+        box-sizing: border-box;
         border: 5px solid @gc;
-    
-        .form_inner_wrapper{
-            background-color: @lc;
-            padding: 15px;
-            box-sizing: border-box;
-    
-            .form-group{
-                border-right: 1px solid grey;
-                padding-left: 5px;
-    
-                label{
-                    display: block;
-                    font-size: 1.125em;
-                    min-width: 250px;
-                }
+
+        .form-group{
+            border-right: 1px solid grey;
+            padding-left: 5px;
+
+            label{
+                display: block;
+                font-size: 1.125em;
+                min-width: 250px;
+            }
+
+            i{
+                color: @gc;
+            }
+
+            input, select{
+                border: none;
+                font-size: 1.250em;
+            }
+            
+            &:nth-child(5){
+                border-right: none;
+                width: 150px;
+            }
+
+            &:last-child{
+                border-right: none;
+                padding-left: 0;
+            }
+        
+            button{
+                margin-left: 10px;
+                background-color: @gc;
+                border: none;
 
                 i{
-                    color: @gc;
-                }
-    
-                input, select{
-                    border: none;
-                    font-size: 1.250em;
-                }
-                
-                &:nth-child(5){
-                    border-right: none;
-                    width: 150px;
-                }
-
-                &:last-child{
-                    border-right: none;
-                    padding-left: 0;
-                }
-            
-                button{
-                    margin-left: 10px;
-                    background-color: @gc;
-                    border: none;
-
-                    i{
-                        font-size: 40px;
-                        padding: 10px;
-                        color: @lc;
-                    }
+                    font-size: 40px;
+                    padding: 10px;
+                    color: @lc;
                 }
             }
         }
