@@ -7800,42 +7800,42 @@ body .main .page_background_second {
   top: 0;
   z-index: -1;
 }
-body .main .container {
+.container {
   width: 1400px;
 }
-.row:nth-child(1) {
+.container .row {
   margin-top: 40px;
 }
-.row img {
+.container .row img {
   margin-bottom: 60px;
 }
-.row .navbar {
+.container .row .navbar {
   float: right;
   font-size: 0.875em;
   text-transform: uppercase;
   position: absolute;
   right: 60px;
 }
-.row .navbar .navbar-nav > li:hover .dropdown-menu {
+.container .row .navbar .navbar-nav > li:hover .dropdown-menu {
   display: block;
 }
-.row .navbar .navbar-nav > li:hover .dropdown-menu .sub-menu {
+.container .row .navbar .navbar-nav > li:hover .dropdown-menu .sub-menu {
   left: 100%;
   position: absolute;
   top: 0;
   visibility: hidden;
   margin-top: -1px;
 }
-.row .navbar .navbar-nav > li:hover .dropdown-menu li:hover .sub-menu {
+.container .row .navbar .navbar-nav > li:hover .dropdown-menu li:hover .sub-menu {
   visibility: visible;
 }
-.row .navbar .navbar-nav > li:hover .dropdown-menu li a {
+.container .row .navbar .navbar-nav > li:hover .dropdown-menu li a {
   color: #000000;
 }
-.row .navbar li a {
+.container .row .navbar li a {
   color: #FFFFFF;
 }
-.row .navbar li a:hover {
+.container .row .navbar li a:hover {
   background-color: transparent;
   text-decoration: underline;
   text-underline-offset: 6px;
@@ -7843,11 +7843,11 @@ body .main .container {
   text-decoration-thickness: 3px;
   transition: 0.3s;
 }
-.row .flags_wrapper {
+.container .row .flags_wrapper {
   position: relative;
   float: right;
 }
-.row .flags_wrapper li {
+.container .row .flags_wrapper li {
   display: inline;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7856,43 +7856,44 @@ body .main .container {
   height: 16px;
   width: 20px;
 }
-.row .flags_wrapper li:nth-child(1) {
+.container .row .flags_wrapper li:nth-child(1) {
   background-image: url(hr.svg);
   right: 10px;
 }
-.row .flags_wrapper li:nth-child(2) {
+.container .row .flags_wrapper li:nth-child(2) {
   background-image: url(de.svg);
   left: 40px;
 }
-.row .flags_wrapper li:nth-child(3) {
+.container .row .flags_wrapper li:nth-child(3) {
   background-image: url(gb.svg);
   left: 70px;
 }
-.row .flags_wrapper li:nth-child(4) {
+.container .row .flags_wrapper li:nth-child(4) {
   background-image: url(it.svg);
   left: 100px;
 }
-.row .flags_wrapper li a {
+.container .row .flags_wrapper li a {
   color: transparent;
 }
-.row .gold_dec {
+.container .gold_dec {
   color: #FFFFFF;
   text-align: left;
   margin-bottom: 50px;
+  position: relative;
 }
-.row .gold_dec > p {
+.container .gold_dec > p {
   text-transform: uppercase;
   font-size: 3.5em;
 }
-.row .gold_dec > p:nth-of-type(2) {
+.container .gold_dec > p:nth-of-type(2) {
   text-transform: none;
   font-size: 10.625em;
   font-family: Brush Script MT, Brush Script Std, cursive;
   position: absolute;
-  top: 190px;
-  left: 240px;
+  top: -10px;
+  left: -15px;
 }
-.row .gold_dec > p:nth-of-type(2)::before {
+.container .gold_dec > p:nth-of-type(2)::before {
   content: '';
   position: absolute;
   background-color: #97975c;
@@ -7902,26 +7903,29 @@ body .main .container {
   left: -125px;
   top: 80px;
 }
-.row .map_wrapper {
+.container .map_wrapper {
   margin-top: 150px;
 }
-.row .map_wrapper p {
+.container .map_wrapper p {
   color: #FFFFFF;
   font-size: 1.25em;
   text-align: left;
   max-width: 320px;
 }
-form {
+.container .map_wrapper img {
+  margin-bottom: 50px;
+}
+.container form {
   background-color: #FFFFFF;
   padding: 15px;
   box-sizing: border-box;
   border: 5px solid #97975c;
 }
-form .form-group {
+.container form .form-group {
   border-right: 1px solid grey;
   padding-left: 5px;
 }
-form .form-group::after {
+.container form .form-group::after {
   display: inline-block;
   font-weight: normal;
   line-height: 1;
@@ -7938,41 +7942,41 @@ form .form-group::after {
   color: #97975c;
   margin-top: 5px;
 }
-form .form-group:nth-child(1)::after {
+.container form .form-group:nth-child(1)::after {
   content: "\f015";
 }
-form .form-group:nth-child(2)::after {
+.container form .form-group:nth-child(2)::after {
   content: "\f601";
 }
-form .form-group:nth-child(3)::after {
+.container form .form-group:nth-child(3)::after {
   content: "\f02c";
 }
-form .form-group:nth-child(4)::after {
+.container form .form-group:nth-child(4)::after {
   content: "\f5cb";
 }
-form .form-group:nth-child(5) {
+.container form .form-group:nth-child(5) {
   border-right: none;
   width: 165px;
 }
-form .form-group:nth-child(5) input {
+.container form .form-group:nth-child(5) input {
   width: 120px;
 }
-form .form-group:last-child {
+.container form .form-group:last-child {
   border-right: none;
   padding-left: 0;
 }
-form .form-group label {
+.container form .form-group label {
   display: block;
   font-size: 1.125em;
   min-width: 250px;
 }
-form .form-group input,
-form .form-group select {
+.container form .form-group input,
+.container form .form-group select {
   border: none;
   font-size: 1.25em;
   width: 225px;
 }
-form .form-group button {
+.container form .form-group button {
   background-color: #97975c;
   border: none;
   padding: 40px 15px;
@@ -7992,6 +7996,6 @@ form .form-group button {
   line-height: 0.00142857em;
   vertical-align: -0.36642857em;
 }
-form .form-group button::before {
+.container form .form-group button::before {
   content: "\f002";
 }
