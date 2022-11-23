@@ -1,6 +1,8 @@
-@import "./less/fontawesome.less";
+@import "./fontawesome/less/fontawesome.less";
 
-@import "./less/solid.less";
+@import "./fontawesome/less/solid.less";
+@import "./fontawesome/less/brands.less";
+
 
 @lc: #FFFFFF;
 @gc: #97975c;
@@ -11,39 +13,42 @@ body{
 
     .main{
         position: relative;
+
+        .page_background_first{
+            background-image: url(business-people-dark-blue-overlay-white-math-graphics-digital-composite-89406963.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 1000px;
+            width: 40%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            z-index: -1
+        }
+        
+        .page_background_second{
+            background-image: url(1_The-main-picture-of-Villa-Noce-790x500.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 1000px;
+            width: 60%;
+            right: 0;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .container{
+            width: 1400px;
+        }
     }
 }
 
-.page_background_first{
-    background-image: url(business-people-dark-blue-overlay-white-math-graphics-digital-composite-89406963.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 1000px;
-    width: 40%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    z-index: -1
-}
+.row{
 
-.page_background_second{
-    background-image: url(1_The-main-picture-of-Villa-Noce-790x500.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 1000px;
-    width: 60%;
-    right: 0;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
-
-.container{
-    width: 1400px;
-
-    >.row{
+    &:nth-child(1){
         margin-top: 40px;
     }
 
@@ -108,11 +113,16 @@ body{
         position: absolute;
         right: -120px;
         top: 15px;
+
+        li{
+            display:inline;
+        }
     }
 
     .gold_dec{
         color: @lc;
         text-align: left;
+        margin-bottom: 50px;
 
         >p{
             text-transform: uppercase;
@@ -124,7 +134,7 @@ body{
                 font-family: Brush Script MT, Brush Script Std, cursive;
                 position: absolute;
                 top: 190px;
-                left: 250px;
+                left: 240px;
 
                 &::before{
                     content: '';
@@ -152,7 +162,7 @@ body{
         }
     }
 
-    .form_inner_wrapper{
+    form{
         background-color: @lc;
         padding: 15px;
         box-sizing: border-box;
@@ -162,27 +172,45 @@ body{
             border-right: 1px solid grey;
             padding-left: 5px;
 
-            label{
-                display: block;
-                font-size: 1.125em;
-                min-width: 250px;
-            }
-
-            i{
+            &::after{
+                .fa-icon;
+                .fa-solid;
+                float: left;
+                margin-right: 20px;
                 color: @gc;
+                margin-top: 5px;
             }
 
-            input, select{
-                border: none;
-                font-size: 1.250em;
+            &:nth-child(1){
+                &::after{
+                    content: @fa-var-house;
+                }
             }
-            
+
+            &:nth-child(2){
+                &::after{
+                    content: @fa-var-location-crosshairs;
+                }
+            }
+
+            &:nth-child(3){
+                &::after{
+                    content: @fa-var-tags;
+                }
+            }
+
+            &:nth-child(4){
+                &::after{
+                    content: @fa-var-vector-square;
+                }
+            }
+
             &:nth-child(5){
                 border-right: none;
-                width: 150px;
+                width: 140px;
 
-                &::after{
-                    content: @fa-var-magnifying-glass;
+                input{
+                    width: 100px;
                 }
             }
 
@@ -190,19 +218,29 @@ body{
                 border-right: none;
                 padding-left: 0;
             }
+
+            label{
+                display: block;
+                font-size: 1.125em;
+                min-width: 250px;
+            }
+
+            input,
+            select{
+                border: none;
+                font-size: 1.250em;
+            } 
         
             button{
-                margin-left: 10px;
                 background-color: @gc;
                 border: none;
-
-                i{
-                    font-size: 40px;
-                    padding: 10px;
-                    color: @lc;
-                }
+                padding: 40px 15px;
+                color: @lc;
+                .fa-icon-solid(@fa-var-magnifying-glass);
+                .fa-size(700px)
             }
         }
     }
 }
+
 
