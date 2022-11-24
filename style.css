@@ -7817,6 +7817,18 @@ body .main .page_background_second {
   position: absolute;
   right: 60px;
 }
+.container .row .navbar .navbar-nav > li a {
+  color: #FFFFFF;
+  background-color: transparent;
+}
+.container .row .navbar .navbar-nav > li a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: #97975c;
+  text-decoration-thickness: 3px;
+  transition: 0.3s;
+}
 .container .row .navbar .navbar-nav > li:hover .dropdown-menu {
   display: block;
 }
@@ -7832,17 +7844,6 @@ body .main .page_background_second {
 }
 .container .row .navbar .navbar-nav > li:hover .dropdown-menu li a {
   color: #000000;
-}
-.container .row .navbar li a {
-  color: #FFFFFF;
-}
-.container .row .navbar li a:hover {
-  background-color: transparent;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-color: #97975c;
-  text-decoration-thickness: 3px;
-  transition: 0.3s;
 }
 .container .row .flags_wrapper {
   position: relative;

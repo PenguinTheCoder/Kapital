@@ -62,6 +62,20 @@ body{
 
             .navbar-nav{
                 >li{
+                    a{
+                        color: @lc;
+                        background-color: transparent;
+
+                        &:hover{
+                            background-color: transparent;
+                            text-decoration: underline;
+                            text-underline-offset: 6px;
+                            text-decoration-color: @gc;
+                            text-decoration-thickness: 3px;
+                            transition: .3s;
+                        }
+                    }
+                    
                     &:hover{
                         .dropdown-menu{
                             display: block;
@@ -88,23 +102,8 @@ body{
                         }
                     }
                 }
-            }  
-        
-            li{
-                a{
-                    color: @lc;
-            
-                    &:hover{
-                        background-color: transparent;
-                        text-decoration: underline;
-                        text-underline-offset: 6px;
-                        text-decoration-color: @gc;
-                        text-decoration-thickness: 3px;
-                        transition: .3s;
-                    }
-                }
-            }
-        }
+            } 
+        }    
 
         .flags_wrapper{
             position: relative;
