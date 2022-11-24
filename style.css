@@ -7776,7 +7776,8 @@ body {
 body .main {
   position: relative;
 }
-body .main .page_background_first {
+body .main::before {
+  content: '';
   background-image: url(business-people-dark-blue-overlay-white-math-graphics-digital-composite-89406963.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -7878,7 +7879,7 @@ body .main .page_background_second {
 .container .gold_dec {
   color: #FFFFFF;
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
   position: relative;
 }
 .container .gold_dec > p {
@@ -7904,7 +7905,8 @@ body .main .page_background_second {
   top: 80px;
 }
 .container .map_wrapper {
-  margin-top: 150px;
+  position: relative;
+  margin-bottom: 340px;
 }
 .container .map_wrapper p {
   color: #FFFFFF;
@@ -7912,8 +7914,14 @@ body .main .page_background_second {
   text-align: left;
   max-width: 320px;
 }
-.container .map_wrapper img {
-  margin-bottom: 50px;
+.container .map_wrapper::after {
+  content: '';
+  background-image: url(260-2608498_jamaica-clipart-island-jamaica-map-png.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 300px;
+  width: 390px;
 }
 .container form {
   background-color: #FFFFFF;

@@ -14,7 +14,8 @@ body{
     .main{
         position: relative;
 
-        .page_background_first{
+        &::before{
+            content: '';
             background-image: url(business-people-dark-blue-overlay-white-math-graphics-digital-composite-89406963.jpg);
             background-repeat: no-repeat;
             background-size: cover;
@@ -148,7 +149,7 @@ body{
     .gold_dec{
         color: @lc;
         text-align: left;
-        margin-bottom: 50px;
+        margin-bottom: 120px;
         position: relative;
     
         >p{
@@ -180,7 +181,8 @@ body{
     }
     
     .map_wrapper{
-        margin-top: 150px;
+        position: relative;
+        margin-bottom: 340px;
         
         p{
             color: @lc;
@@ -188,9 +190,14 @@ body{
             text-align: left;
             max-width: 320px;
         }
-    
-        img{
-            margin-bottom: 50px;
+        &::after{
+            content: '';
+            background-image:url(260-2608498_jamaica-clipart-island-jamaica-map-png.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            height: 300px;
+            width: 390px;
         }
     }
     
